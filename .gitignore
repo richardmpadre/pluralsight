@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BethanyPieShopHRSM/.vs/BethanyPieShopHRSM/v17/.futdcache.v1
+BethanyPieShopHRSM/bin/
+/BethanyPieShopHRSM/BethanyPieShopHRSM/bin/Debug/net6.0
+/BethanyPieShopHRSM/BethanysPieShopHRM.Shared/bin/Debug/net6.0
+/BethanyPieShopHRSM/BethanysPieShopHRM.Shared/obj/Debug/net6.0
+/BethanyPieShopHRSM/BethanysPieShopHRM.Shared/obj
+/BethanyPieShopHRSM/BethanyPieShopHRSM/obj/Debug/net6.0/build-gz
