@@ -1,6 +1,7 @@
 ﻿using BethanyPieShopHRSM.Models;
 using BethanysPieShopHRM.Shared.Domain;
 using Blazored.LocalStorage;
+using System.Text;
 using System.Text.Json;
 
 namespace BethanyPieShopHRSM.Services
@@ -17,7 +18,7 @@ namespace BethanyPieShopHRSM.Services
         }
         public Task<Employee> AddEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            var employeeJson = new StringContent(JsonSerializer.Serialize(employee), Encoding.UTF8, "application/json");
         }
 
         public Task DeleteEmployee(int employeeId)

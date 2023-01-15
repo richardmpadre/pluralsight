@@ -1,0 +1,49 @@
+﻿@page "/employeeedit"
+@page "/employeeedit/{EmployeeId}"
+
+<section class="employee-edit">
+    <h1 class="page-title">Details for @Employee.FirstName @Employee.LastName</h1>
+    <EditForm Model="@Employee" OnInvalidSubmit="@HandleInvalidSubmit" OnValidSubmit="@HandleValidSubmit">
+        <div class="row mb-3">
+            <label for="lastName" class="col-form-label col-md-3">Last Name: </label>
+            <div class="col-md-8">
+                <InputText id="lastName" @bind-Value="@Employee.LastName" class="form-control col-md-8" placeholder="Enter last name"></InputText>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="firstName" class="col-form-label col-md-3">First Name: </label>
+            <div class="col-md-8">
+                <InputText id="firstName" @bind-Value="@Employee.FirstName" class="form-control col-md-8" placeholder="Enter first name"></InputText>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="birthdate" class="col-form-label col-md-3">Birthdate: </label>
+            <div class="col-md-8">
+                <InputDate id="birthdate" @bind-Value="@Employee.BirthDate" class="form-control col-md-8" placeholder="Enter birth date"></InputDate>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="email" class="col-form-label col-md-3">Email: </label>
+            <div class="col-md-8">
+                <InputText id="email" @bind-Value="@Employee.Email" class="form-control col-md-8" placeholder="Enter email"></InputText>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="country" class="col-form-label col-md-3">Country: </label>
+            <div class="col-md-8">
+                <InputSelect id="country" @bind-Value="Employee.Country">
+                    @foreach(var country in Countries)
+                    {
+                        <option value="@country.CountryId">@country.Name</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-1">Save Employee</button>
+    </EditForm>
+</section>
