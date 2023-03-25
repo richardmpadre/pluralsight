@@ -5,8 +5,8 @@ using Amazon.S3.Encryption;
 using Amazon.S3.Model;
 
 var kmsKeyId = "";
-var keyId = "AKIA5DRXSOKFTULAYWXJ";
-var keySecret = "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";
+var keyId = "";
+var keySecret = "";
 var bucketName = "rpadredemo";
 var objectKey = "obj-01";
 
