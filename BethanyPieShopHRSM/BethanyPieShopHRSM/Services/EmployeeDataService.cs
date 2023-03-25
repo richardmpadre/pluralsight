@@ -16,10 +16,6 @@ namespace BethanyPieShopHRSM.Services
             _httpClient = httpClient;
             _localStorageService = localStorageService;
         }
-        public Task<Employee> AddEmployee(Employee employee)
-        {
-            var employeeJson = new StringContent(JsonSerializer.Serialize(employee), Encoding.UTF8, "application/json");
-        }
 
         public Task DeleteEmployee(int employeeId)
         {
